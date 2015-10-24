@@ -1,0 +1,43 @@
+﻿@model Hotel.Models.HotelsInfo
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HotelsInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.hotelName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hotelName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hotelAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hotelAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hotelPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hotelPhoneNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
